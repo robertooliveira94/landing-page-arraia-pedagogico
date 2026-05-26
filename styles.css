@@ -323,14 +323,15 @@ a {
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--accent-green);
   color: #fff;
-  box-shadow: 0 10px 25px rgba(230, 81, 0, 0.35);
+  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(211, 47, 47, 0.45);
+  box-shadow: 0 15px 30px rgba(46, 125, 50, 0.45);
+  background: #256328;
 }
 
 .pulse-btn {
@@ -338,9 +339,9 @@ a {
 }
 
 @keyframes pulsar {
-  0% { box-shadow: 0 0 0 0 rgba(230, 81, 0, 0.55); }
-  70% { box-shadow: 0 0 0 15px rgba(230, 81, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(230, 81, 0, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.55); }
+  70% { box-shadow: 0 0 0 15px rgba(46, 125, 50, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
 }
 
 .badge {
@@ -447,17 +448,19 @@ a {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  gap: 2rem;
   padding: clamp(2rem, 5vw, 4.5rem) 0 3.5rem;
 }
 
 .hero-copy {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  max-width: 800px;
 }
 
 .hero h1 {
@@ -477,8 +480,9 @@ a {
   display: grid;
   gap: 0.8rem;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 auto 2rem auto;
   list-style: none;
+  text-align: left;
 }
 
 .check-list li {
@@ -509,6 +513,7 @@ a {
 .cta-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.65rem;
   width: 100%;
 }
@@ -583,15 +588,7 @@ a {
   overflow: hidden;
 }
 
-.pain-card::after {
-  content: "✕";
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.2rem;
-  color: rgba(211, 47, 47, 0.15);
-  font-weight: 700;
-}
+/* Removed X in pain cards */
 
 .pain-card h4 {
   font-family: var(--font-display);

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;800&display=swap');
+/* Google Fonts imported in HTML head for optimal parallel loading performance */
 
 :root {
   /* Color Palette */
